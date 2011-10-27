@@ -1,4 +1,9 @@
 <dataset>
-   <products id="1" name="Product A" />
-   <products id="2" name="Product B" />
+
+   <category id="1" name="Java Enterprise" seo_key="java_enterprise" />
+   <category id="2" name="Romane" seo_key="romane" />
+   
+   <book id="1" title="JSF Powerbook" isbn="123423423" seo_key="jsf_powerbook"
+        category_id="1" />
+    
 </dataset>

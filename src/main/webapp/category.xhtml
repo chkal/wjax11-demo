@@ -8,19 +8,12 @@
 
    <ui:define name="content">
 
-     <h:dataTable var="category" value="#{homeBean.categories}">
+     <h:dataTable var="book" value="#{categoryBean.books}">
      
         <h:column>
-            #{category.name}
+            #{category.title}
         </h:column>
 
-        <h:column>
-            <pretty:link mappingId="category">
-                <f:param value="#{category.seoKey}"/>
-                Bücher anzeigen
-            </pretty:link>
-        </h:column>
-     
      </h:dataTable>
 
    </ui:define>

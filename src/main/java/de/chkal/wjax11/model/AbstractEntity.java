@@ -1,22 +1,16 @@
 package de.chkal.wjax11.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Table(name = "products")
-public class Product {
+@MappedSuperclass
+public class AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
-    @Basic
-    private String name;
 
     public long getId() {
         return id;
@@ -24,14 +18,6 @@ public class Product {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 }

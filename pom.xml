@@ -10,15 +10,16 @@
 
    <build>
       <finalName>wjax11-demo</finalName>
-
-      <plugin>
-         <artifactId>maven-compiler-plugin</artifactId>
-         <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
-         </configuration>
-      </plugin>
-
+      <plugins>
+         <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.3.2</version>
+            <configuration>
+               <source>1.6</source>
+               <target>1.6</target>
+            </configuration>
+         </plugin>
+      </plugins>
    </build>
 
    <dependencies>
@@ -28,6 +29,12 @@
          <artifactId>javaee-web-api</artifactId>
          <version>6.0</version>
          <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>com.ocpsoft</groupId>
+         <artifactId>prettyfaces-jsf2</artifactId>
+         <version>3.3.0</version>
       </dependency>
 
       <dependency>

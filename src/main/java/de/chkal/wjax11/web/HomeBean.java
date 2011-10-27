@@ -1,26 +1,34 @@
 package de.chkal.wjax11.web;
 
-import java.util.Date;
+import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import de.chkal.wjax11.dao.ProductDao;
+import com.ocpsoft.pretty.faces.annotation.URLAction;
+import com.ocpsoft.pretty.faces.annotation.URLMapping;
+
+import de.chkal.wjax11.dao.CategoryDao;
+import de.chkal.wjax11.model.Category;
 
 @Named
 @RequestScoped
+@URLMapping(id="home", pattern="/home", viewId="/faces/home.xhtml")
 public class HomeBean {
 
     @Inject
-    private ProductDao productDao;
+    private CategoryDao categoryDao;
     
-    public Date getDate() {
-        return new Date();
+    private List<Category> categories;
+
+    @URLAction
+    public void init() {
+        categories = categoryDao.list();
     }
-    
-    public long getCount() {
-        return productDao.count();
+
+    public List<Category> getCategories() {
+        return categories;
     }
     
 }
