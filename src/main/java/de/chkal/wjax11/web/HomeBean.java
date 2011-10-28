@@ -14,12 +14,12 @@ import de.chkal.wjax11.model.Category;
 
 @Named
 @RequestScoped
-@URLMapping(id="home", pattern="/home", viewId="/faces/home.xhtml")
+@URLMapping(id = "home", pattern = "/home", viewId = "/faces/home.xhtml")
 public class HomeBean {
 
     @Inject
     private CategoryDao categoryDao;
-    
+
     private List<Category> categories;
 
     @URLAction
@@ -30,5 +30,5 @@ public class HomeBean {
     public List<Category> getCategories() {
         return categories;
     }
-    
+
 }

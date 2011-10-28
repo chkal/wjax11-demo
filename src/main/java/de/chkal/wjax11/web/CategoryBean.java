@@ -24,21 +24,21 @@ public class CategoryBean {
 
     @Inject
     private CategoryDao categoryDao;
-    
+
     @Inject
     private BookDao bookDao;
 
     private List<Book> books;
-    
+
     @URLAction
     public void init() {
-        
+
         Category category = categoryDao.getBySeoKey(seoKey);
-        if(category == null) {
+        if (category == null) {
             PrettyContext.getCurrentInstance().sendError(404);
             return;
         }
-        
+
         books = bookDao.findByCategory(category);
 
     }
