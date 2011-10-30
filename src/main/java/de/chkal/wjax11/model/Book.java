@@ -15,6 +15,9 @@ public class Book extends AbstractEntity {
     private String title;
     
     @Basic
+    private String author;
+    
+    @Basic
     private Long isbn;
     
     @Basic
@@ -56,5 +59,15 @@ public class Book extends AbstractEntity {
     public void setIsbn(Long isbn) {
         this.isbn = isbn;
     }
+
+   public String getAuthor()
+   {
+      return author;
+   }
+
+   public void setAuthor(String author)
+   {
+      this.author = author;
+   }
     
 }

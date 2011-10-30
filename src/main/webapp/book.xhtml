@@ -8,20 +8,13 @@
 
    <ui:define name="content">
 
-     <h:dataTable var="book" value="#{categoryBean.books}">
-     
-        <h:column>
-            #{book.title}
-        </h:column>
-        
-        <h:column>
-            <pretty:link mappingId="book">
-                <f:param value="#{book.isbn}"/>
-                Details
-            </pretty:link>
-        </h:column>
-
-     </h:dataTable>
+      #{bookBean.book.title}
+      
+      <pretty:urlbuffer var="imageUrl" mappingId="bookImage">
+        <f:param value="#{bookBean.book.isbn}"/>
+      </pretty:urlbuffer>
+      
+      <img src="#{imageUrl}" alt="image" />
 
    </ui:define>
 
