@@ -6,7 +6,9 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.ocpsoft.pretty.faces.annotation.URLAction;
 import com.ocpsoft.pretty.faces.annotation.URLMapping;
+import com.ocpsoft.pretty.faces.annotation.URLQueryParameter;
 
 import de.chkal.wjax11.dao.BookDao;
 import de.chkal.wjax11.model.Book;
@@ -16,6 +18,7 @@ import de.chkal.wjax11.model.Book;
 @URLMapping(id = "search", pattern = "/suchen", viewId = "/faces/search.xhtml")
 public class SearchBean {
 
+    @URLQueryParameter("q")
     private String query;
 
     private List<Book> books;
@@ -23,10 +26,11 @@ public class SearchBean {
     @Inject
     private BookDao bookDao;
     
-    public String search() {
-        books = bookDao.findByQuery(query);
-        System.out.println("books: "+books.size());
-        return null;
+    @URLAction
+    public void get() {
+        if(query != null && query.trim().length() > 0) {
+            books = bookDao.findByQuery(query);
+        }
     }
 
     public String getQuery() {

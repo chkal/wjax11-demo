@@ -1,27 +1,45 @@
 <?xml version="1.0"?>
-<ui:composition template="/WEB-INF/templates/template.xhtml"
-   xmlns="http://www.w3.org/1999/xhtml"
-   xmlns:ui="http://java.sun.com/jsf/facelets"
-   xmlns:h="http://java.sun.com/jsf/html"
-   xmlns:f="http://java.sun.com/jsf/core"
-   xmlns:pretty="http://ocpsoft.com/prettyfaces">
+<ui:composition template="/WEB-INF/templates/template.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core" xmlns:pretty="http://ocpsoft.com/prettyfaces">
 
    <ui:define name="content">
 
-     <h:dataTable var="book" value="#{categoryBean.books}">
-     
-        <h:column>
-            #{book.title}
-        </h:column>
-        
-        <h:column>
-            <pretty:link mappingId="book">
-                <f:param value="#{book.isbn}"/>
-                Details
-            </pretty:link>
-        </h:column>
+      <h:dataTable var="book" value="#{categoryBean.books}" rendered="#{ not empty categoryBean.books }"
+         styleClass="book-table" columnClasses="title,author,stock,price">
 
-     </h:dataTable>
+         <h:column>
+            <f:facet name="header">Titel</f:facet>
+
+            <pretty:link mappingId="book">
+               <f:param value="#{ seo.escape( book.title ) }" />
+               <f:param value="#{book.isbn}" />
+               #{book.title}
+            </pretty:link>
+
+         </h:column>
+
+         <h:column>
+            <f:facet name="header">Autor</f:facet>
+            #{book.author}
+         </h:column>
+
+         <h:column>
+            <f:facet name="header">Lieferbar</f:facet>
+            <h:graphicImage value="/images/led_green.png" rendered="#{book.stock gt 0}"
+               title="#{book.stock} Exemplar(e) auf Lager" />
+            <h:graphicImage value="/images/led_orange.png" rendered="#{book.stock eq 0}"
+               title="Momentan nicht lieferbar" />
+         </h:column>
+
+         <h:column>
+            <f:facet name="header">Preis</f:facet>
+            <h:outputText value="#{book.price}">
+               <f:convertNumber minFractionDigits="2" maxFractionDigits="2" />
+            </h:outputText> €
+         </h:column>
+
+      </h:dataTable>
 
    </ui:define>
 

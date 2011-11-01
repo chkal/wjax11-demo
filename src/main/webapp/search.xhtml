@@ -13,7 +13,7 @@
 
             <h:inputText value="#{searchBean.query}" styleClass="xlarge" />
 
-            <h:commandButton action="#{searchBean.search}" value="Suchen" styleClass="btn primary" />
+            <h:commandButton action="pretty:search" value="Suchen" styleClass="btn primary" />
 
          </h:form>
       </div>
@@ -25,6 +25,7 @@
             <f:facet name="header">Titel</f:facet>
 
             <pretty:link mappingId="book">
+               <f:param value="#{ seo.escape( book.title ) }" />
                <f:param value="#{book.isbn}" />
                #{book.title}
             </pretty:link>
@@ -52,7 +53,6 @@
          </h:column>
 
       </h:dataTable>
-
 
    </ui:define>
 

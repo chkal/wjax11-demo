@@ -14,11 +14,11 @@ import de.chkal.wjax11.web.cart.Cart;
 
 @Named
 @RequestScoped
-@URLMapping(id = "book", pattern = "/buch/#{bookBean.isbn}", viewId = "/faces/book.xhtml")
+@URLMapping(id = "book", pattern = "/buch/#{title}/#{bookBean.isbn}", viewId = "/faces/book.xhtml")
 public class BookBean {
 
     private Long isbn;
-
+    
     private Book book;
 
     @Inject
@@ -39,11 +39,8 @@ public class BookBean {
     }
 
     public String addToCart() {
-        
         cartBean.addBook(book);
-        
-        return null;
-        
+        return "pretty:book";
     }
 
     public Long getIsbn() {
