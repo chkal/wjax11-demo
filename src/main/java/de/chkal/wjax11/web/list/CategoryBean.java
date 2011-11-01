@@ -6,7 +6,6 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.ocpsoft.pretty.PrettyContext;
 import com.ocpsoft.pretty.faces.annotation.URLAction;
 import com.ocpsoft.pretty.faces.annotation.URLMapping;
 
@@ -31,15 +30,25 @@ public class CategoryBean {
     private List<Book> books;
 
     @URLAction
-    public void init() {
+    public String init() {
 
         Category category = categoryDao.getBySeoKey(seoKey);
+        
         if (category == null) {
+
+            return "pretty:home";
+            
+            // alternative:
+            /*
             PrettyContext.getCurrentInstance().sendError(404);
-            return;
+            return null;
+             */
+            
         }
 
         books = bookDao.findByCategory(category);
+        
+        return null;
 
     }
 
