@@ -6,6 +6,7 @@ import javax.inject.Named;
 
 import com.ocpsoft.pretty.faces.annotation.URLAction;
 import com.ocpsoft.pretty.faces.annotation.URLMapping;
+import com.ocpsoft.pretty.faces.annotation.URLMappings;
 
 import de.chkal.wjax11.dao.BookDao;
 import de.chkal.wjax11.model.Book;
@@ -13,7 +14,10 @@ import de.chkal.wjax11.web.cart.Cart;
 
 @Named
 @RequestScoped
-@URLMapping(id = "book", pattern = "/buch/#{title}/#{ /\\\\d+/ : bookBean.isbn }", viewId = "/faces/book.xhtml")
+@URLMappings(mappings={
+        @URLMapping(id = "book", pattern = "/buch/#{ bookBean.isbn }", viewId = "/faces/book.xhtml"),
+        @URLMapping(id = "bookSeo", pattern = "/buch/#{title}/#{ /\\\\d+/ : bookBean.isbn }", viewId = "/faces/book.xhtml")
+})
 public class BookBean {
 
     private Long isbn;

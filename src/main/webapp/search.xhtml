@@ -25,7 +25,6 @@
             <f:facet name="header">Titel</f:facet>
 
             <pretty:link mappingId="book">
-               <f:param value="#{ seo.escape( book.title ) }" />
                <f:param value="#{book.isbn}" />
                #{book.title}
             </pretty:link>
