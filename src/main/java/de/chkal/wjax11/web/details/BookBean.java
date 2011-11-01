@@ -1,4 +1,4 @@
-package de.chkal.wjax11.web;
+package de.chkal.wjax11.web.details;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -10,6 +10,7 @@ import com.ocpsoft.pretty.faces.annotation.URLMapping;
 
 import de.chkal.wjax11.dao.BookDao;
 import de.chkal.wjax11.model.Book;
+import de.chkal.wjax11.web.cart.Cart;
 
 @Named
 @RequestScoped
@@ -23,6 +24,9 @@ public class BookBean {
     @Inject
     private BookDao bookDao;
 
+    @Inject
+    private Cart cartBean;
+
     @URLAction
     public void init() {
 
@@ -32,6 +36,14 @@ public class BookBean {
             return;
         }
 
+    }
+
+    public String addToCart() {
+        
+        cartBean.addBook(book);
+        
+        return null;
+        
     }
 
     public Long getIsbn() {

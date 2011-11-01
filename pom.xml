@@ -34,7 +34,7 @@
       <dependency>
          <groupId>com.ocpsoft</groupId>
          <artifactId>prettyfaces-jsf2</artifactId>
-         <version>3.3.1-SNAPSHOT</version>
+         <version>3.3.1</version>
       </dependency>
 
       <dependency>
@@ -56,4 +56,19 @@
       </dependency>
 
    </dependencies>
+   
+   <repositories>
+   
+   <repository>
+        <id>ocp</id>
+        <url>http://ocpsoft.com/repository/</url>
+        <releases>
+           <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>false</enabled>
+        </snapshots>        
+     </repository>
+   
+   </repositories>
 </project>

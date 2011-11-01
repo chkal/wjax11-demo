@@ -15,7 +15,7 @@ public class BookDao extends AbstractDao<Book> {
     public Class<Book> getEntityClass() {
         return Book.class;
     }
-    
+
     public List<Book> findByCategory(Category category) {
         return entityManager.createQuery(
                 "SELECT b FROM Book b WHERE b.category = :category ORDER BY b.title", Book.class)
@@ -32,6 +32,13 @@ public class BookDao extends AbstractDao<Book> {
         } catch (NoResultException e) {
             return null;
         }
+    }
+
+    public List<Book> findByQuery(String query) {
+        return entityManager.createQuery(
+                "SELECT b FROM Book b WHERE LOWER(b.title) LIKE :query OR LOWER(b.author) LIKE :query ORDER BY b.title", Book.class)
+                .setParameter("query", "%" + query.toLowerCase() + "%")
+                .getResultList();
     }
 
 }

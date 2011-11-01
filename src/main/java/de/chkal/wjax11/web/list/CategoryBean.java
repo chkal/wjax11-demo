@@ -1,4 +1,4 @@
-package de.chkal.wjax11.web;
+package de.chkal.wjax11.web.list;
 
 import java.util.List;
 

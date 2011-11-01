@@ -8,14 +8,57 @@
 
    <ui:define name="content">
 
-      #{bookBean.book.title}
+      <!-- Image -->
+      <div id="book-image">
       
-      <pretty:urlbuffer var="imageUrl" mappingId="bookImage">
-        <f:param value="#{bookBean.book.isbn}"/>
-      </pretty:urlbuffer>
-      
-      <img src="#{imageUrl}" alt="image" />
+        <pretty:urlbuffer var="imageUrl" mappingId="bookImage">
+          <f:param value="#{bookBean.book.isbn}"/>
+        </pretty:urlbuffer>
+        
+        <img src="#{imageUrl}" alt="image" width="200"/>
+        
+      </div>
 
+      <!-- Details -->
+      <div id="book-details">
+      
+        <div id="title">
+          #{bookBean.book.title}
+        </div>
+        
+        <div id="author">
+          von #{bookBean.book.author}
+        </div>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          aliquyam erat, sed diam voluptua. At vero eos et accusam et
+          justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+          dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+          eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores
+          et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+          est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+          consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+          invidunt ut labore et dolore magna aliquyam erat, sed diam
+          voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+          Lorem ipsum dolor sit amet.
+        </p>
+        
+        <div>
+        
+          <h:form>
+            <h:commandButton action="#{bookBean.addToCart}" styleClass="btn primary" value="In den Warenkorb"/>
+          </h:form>
+        
+        </div>
+        
+    </div>
+      
+      
    </ui:define>
 
 </ui:composition>

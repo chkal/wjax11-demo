@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:h="http://java.sun.com/jsf/html" 
@@ -7,6 +9,7 @@
 <head>
 <title>WJAX-2011 PrettyFaces Demo</title>
 <link href="#{request.contextPath}/styles/bootstrap.css" rel="stylesheet" />
+<link href="#{request.contextPath}/styles/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -16,9 +19,17 @@
          <div class="container">
             <a class="brand" href="#{request.contextPath}">WJAX-2011 PrettyFaces Demo</a>
             <ul class="nav">
-               <li class="active"><a href="#">Home</a></li>
-               <li><a href="#about">About</a></li>
-               <li><a href="#contact">Contact</a></li>
+               <li>
+                  <a href="#{request.contextPath}">Startseite</a>
+               </li>
+               <li>
+                  <pretty:link mappingId="search">Suche</pretty:link>
+               </li>
+               <li>
+                  <a href="#" onclick="alert('Not implemented yet!'); return false;">
+                     Warenkorb (#{cart.numberOfBooks})
+                  </a>
+               </li>
             </ul>
          </div>
       </div>
@@ -33,12 +44,14 @@
             </h1>
          </div>
          <div class="row">
-            <div class="span10">
+            <div class="span14">
                <ui:insert name="content" />
             </div>
+            <!-- 
             <div class="span4">
                <h3>Secondary content</h3>
             </div>
+             -->
          </div>
       </div>
 

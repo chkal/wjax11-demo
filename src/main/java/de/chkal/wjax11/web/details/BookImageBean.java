@@ -1,4 +1,4 @@
-package de.chkal.wjax11.web;
+package de.chkal.wjax11.web.details;
 
 import java.io.IOException;
 

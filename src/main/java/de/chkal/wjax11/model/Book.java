@@ -11,6 +11,8 @@ import javax.persistence.Table;
 @Table(name="book")
 public class Book extends AbstractEntity {
 
+    private static final long serialVersionUID = 1L;
+    
     @Basic
     private String title;
     
@@ -21,13 +23,19 @@ public class Book extends AbstractEntity {
     private Long isbn;
     
     @Basic
+    private Float price;
+    
+    @Basic
     @Column(name="seo_key")
     private String seoKey;
     
     @ManyToOne
     @JoinColumn(name="category_id")
     private Category category;
-
+    
+    @Basic
+    private Integer stock;
+    
     public String getSeoKey() {
         return seoKey;
     }
@@ -69,5 +77,21 @@ public class Book extends AbstractEntity {
    {
       this.author = author;
    }
+
+public Float getPrice() {
+    return price;
+}
+
+public void setPrice(Float price) {
+    this.price = price;
+}
+
+public Integer getStock() {
+    return stock;
+}
+
+public void setStock(Integer stock) {
+    this.stock = stock;
+}
     
 }

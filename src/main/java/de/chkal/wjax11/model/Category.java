@@ -9,6 +9,8 @@ import javax.persistence.Table;
 @Table(name="category")
 public class Category extends AbstractEntity {
 
+    private static final long serialVersionUID = 1L;
+    
     @Basic
     private String name;
     
