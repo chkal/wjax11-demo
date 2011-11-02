@@ -11,6 +11,7 @@
          <h:column>
             <f:facet name="header">Titel</f:facet>
 
+            <!-- REMOVE LINK, KEEP TEXT -->
             <pretty:link mappingId="bookSeo">
                <f:param value="#{ seo.escape( book.title ) }" />
                <f:param value="#{book.isbn}" />

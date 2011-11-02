@@ -14,6 +14,7 @@ import de.chkal.wjax11.web.cart.Cart;
 
 @Named
 @RequestScoped
+// REMOVE BOTH MAPPINGS
 @URLMappings(mappings={
         @URLMapping(id = "book", pattern = "/buch/#{ bookBean.isbn }", viewId = "/faces/book.xhtml"),
         @URLMapping(id = "bookSeo", pattern = "/buch/#{title}/#{ /\\\\d+/ : bookBean.isbn }", viewId = "/faces/book.xhtml")
@@ -30,19 +31,16 @@ public class BookBean {
     @Inject
     private Cart cartBean;
 
+    // REMOVE ACTION
     @URLAction
-    public String init() {
+    public String prepare() {
 
         book = bookDao.getByIsbn(isbn);
 
         if (book == null) {
-
-            return "pretty:home";
             
-            // or this way:
-            /*
-            PrettyContext.getCurrentInstance().sendError(404);
-            */
+            // REMOVE RETURN STATEMENT AND ADD TODO
+            return "pretty:home";
             
         }
 
