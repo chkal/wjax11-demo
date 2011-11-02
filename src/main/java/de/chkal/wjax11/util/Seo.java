@@ -1,4 +1,4 @@
-package de.chkal.wjax11.web;
+package de.chkal.wjax11.util;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
