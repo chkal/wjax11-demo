@@ -18,6 +18,7 @@ import de.chkal.wjax11.model.Book;
 @URLMapping(id = "search", pattern = "/suchen", viewId = "/faces/search.xhtml")
 public class SearchBean {
 
+    // ANNOTATION ENTFERNEN
     @URLQueryParameter("q")
     private String query;
 
@@ -26,8 +27,9 @@ public class SearchBean {
     @Inject
     private BookDao bookDao;
     
+    // ANNOTATION ENTFERNEN
     @URLAction
-    public void get() {
+    public void search() {
         if(query != null && query.trim().length() > 0) {
             books = bookDao.findByQuery(query);
         }

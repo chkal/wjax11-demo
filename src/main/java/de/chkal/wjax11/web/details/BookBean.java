@@ -14,10 +14,10 @@ import de.chkal.wjax11.web.cart.Cart;
 
 @Named
 @RequestScoped
-// REMOVE BOTH MAPPINGS
+// REMOVE SECOND MAPPING
 @URLMappings(mappings={
         @URLMapping(id = "book", pattern = "/buch/#{ bookBean.isbn }", viewId = "/faces/book.xhtml"),
-        @URLMapping(id = "bookSeo", pattern = "/buch/#{title}/#{ /\\\\d+/ : bookBean.isbn }", viewId = "/faces/book.xhtml")
+        @URLMapping(id = "bookSeo", pattern = "/buch/#{ title }/#{ bookBean.isbn }", viewId = "/faces/book.xhtml")
 })
 public class BookBean {
 
@@ -31,26 +31,33 @@ public class BookBean {
     @Inject
     private Cart cartBean;
 
-    // REMOVE ACTION
+    /**
+     * Prepare this page
+     */
     @URLAction
     public String prepare() {
 
         book = bookDao.getByIsbn(isbn);
 
         if (book == null) {
-            
-            // REMOVE RETURN STATEMENT AND ADD TODO
             return "pretty:home";
-            
         }
 
         return null;
 
     }
 
+    /**
+     * Add the current book to the user's cart
+     */
     public String addToCart() {
+
+        // add book to cart
         cartBean.addBook(book);
+        
+        // REPLACE WITH "return null"
         return "pretty:book";
+        
     }
 
     public Long getIsbn() {
