@@ -2,6 +2,7 @@ package de.chkal.wjax11.web.cart;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
@@ -22,7 +23,7 @@ public class Cart implements Serializable {
     }
 
     public List<Book> getBooks() {
-        return books;
+        return Collections.unmodifiableList(books);
     }
     
     public int getNumberOfBooks() {

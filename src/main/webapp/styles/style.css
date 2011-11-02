@@ -72,3 +72,14 @@ table.book-table td.price {
  #search input[type='submit'] {
    margin-left: 10px;
  }
+ 
+ /*
+  * Warenkorb
+  */
+ 
+ #cart-sum {
+    width: 800px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+ }
