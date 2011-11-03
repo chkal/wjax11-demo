@@ -41,5 +41,11 @@
         title="Istanbul" author="Gabriele Tröger" isbn="9783932410666" />
    <book id="306" category_id="3" price="9.99" stock="1"
         title="Travel Handbücher Namibia" author="Livia Pack" isbn="9783770161805" />
+
+   <category id="4" name="Science Fiction" seo_key="science_fiction" />
+   <category id="5" name="Ernährung" seo_key="ernaehrung" />
+   <category id="6" name="Haus &amp; Garten" seo_key="haus_garten" />
+   <category id="7" name="Kochbücher" seo_key="kochbuecher" />
+   <category id="8" name="Sport &amp; Fitness" seo_key="sport_fitness" />
     
 </dataset>

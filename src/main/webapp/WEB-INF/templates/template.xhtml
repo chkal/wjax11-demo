@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:h="http://java.sun.com/jsf/html" 
-    xmlns:f="http://java.sun.com/jsf/core"
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
     xmlns:pretty="http://ocpsoft.com/prettyfaces">
 
 <head>
@@ -14,52 +12,43 @@
 
 <body>
 
-   <div class="topbar">
-      <div class="fill">
-         <div class="container">
-            <a class="brand" href="#{request.contextPath}">WJAX-2011 PrettyFaces Demo</a>
-            <ul class="nav">
-               <li>
-                  <a href="#{request.contextPath}">Startseite</a>
-               </li>
-               <li>
-                  <pretty:link mappingId="search">Suche</pretty:link>
-               </li>
-               <li>
-                  <pretty:link mappingId="cart">
+    <div class="topbar">
+        <div class="fill">
+            <div class="container">
+                <a class="brand" href="#{request.contextPath}">WJAX-2011 PrettyFaces Demo</a>
+                <ul class="nav">
+                    <li><a href="#{request.contextPath}">Startseite</a></li>
+                    <li><pretty:link mappingId="search">Suche</pretty:link></li>
+                    <li><pretty:link mappingId="cart">
                      Warenkorb (#{cart.numberOfBooks})
-                  </pretty:link>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </div>
-
-   <div class="container">
-
-      <div class="content">
-         <div class="page-header">
-            <h1>
-               Page name <small>Supporting text or tagline</small>
-            </h1>
-         </div>
-         <div class="row">
-            <div class="span14">
-               <ui:insert name="content" />
+                  </pretty:link></li>
+                </ul>
             </div>
-            <!-- 
-            <div class="span4">
-               <h3>Secondary content</h3>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="content">
+            <div class="page-header">
+                <h1>
+                    Page name <small>Supporting text or tagline</small>
+                </h1>
             </div>
-             -->
-         </div>
-      </div>
+            <div class="row">
+                <div class="span14">
+                    <ui:insert name="content" />
+                </div>
+            </div>
+        </div>
 
-      <footer>
-         <p>WJAX-2011 PrettyFaces Demo</p>
-      </footer>
+        <footer>
+            <div style="width: 100%; text-align: center;">
+                <p>WJAX-2011 PrettyFaces Demo</p>
+            </div>
+        </footer>
 
-   </div>
+    </div>
 
 </body>
 
