@@ -2,47 +2,47 @@
 
    <category id="1" name="Thriller" seo_key="thriller" 
         description="Der Thriller ist sowohl ein Roman- als auch ein Filmgenre mit verschiedenen, sich teilweise überlappenden, Subgenres. Charakteristisch für Thriller ist Spannung, die nicht nur in kurzen Passagen, sondern fast während des gesamten Handlungsverlaufs präsent ist."/>
-   <book id="101" category_id="1" price="9.99" stock="1"
+   <book id="101" category_id="1" price="9.99" stock="1" year="2011"
         title="Ausgelöscht" author="Cody McFadyen" isbn="9783785723906" />
-   <book id="102" category_id="1" price="9.99" stock="3"
+   <book id="102" category_id="1" price="9.99" stock="3" year="2011"
         title="Das verlorene Symbol" author="Dan Brown" isbn="9783785723883" />
-   <book id="103" category_id="1" price="8.99" stock="1"
+   <book id="103" category_id="1" price="8.99" stock="1" year="2011"
         title="Die Arena" author="Stephen King" isbn="9783453266285" />
-   <book id="104" category_id="1" price="9.99" stock="9"
+   <book id="104" category_id="1" price="9.99" stock="9" year="2011"
         title="Imperium" author="Robert Harris" isbn="9783453470835" />
-   <book id="105" category_id="1" price="12.99" stock="0"
+   <book id="105" category_id="1" price="12.99" stock="0" year="2011"
         title="Verstummt" author="Karin Slaughter" isbn="9783442372218" />
-   <book id="106" category_id="1" price="11.99" stock="1"
+   <book id="106" category_id="1" price="11.99" stock="1" year="2011"
         title="Das Grab ist erst der Anfang" author="Kathy Reichs" isbn="9783896673237" />
    
    <category id="2" name="Fantasy" seo_key="fantasy"  
         description="Fantasy ist ein Genre der Phantastik, dessen Wurzeln sich in der Mythologie und den Sagen finden."/>
-   <book id="201" category_id="2" price="9.99" stock="1"
+   <book id="201" category_id="2" price="9.99" stock="1" year="2011"
         title="Eragon - Das Erbe der Macht" author="Christopher Paolini" isbn="9783570138168" />
-   <book id="202" category_id="2" price="9.99" stock="1"
+   <book id="202" category_id="2" price="9.99" stock="1" year="2011"
         title="Drachenelfen" author="Drachenelfen" isbn="9783453266582" />
-   <book id="203" category_id="2" price="5.99" stock="1"
+   <book id="203" category_id="2" price="5.99" stock="1" year="2011"
         title="Die Legenden der Albae" author="Markus Heitz" isbn="9783492701976" />
-   <book id="204" category_id="2" price="9.99" stock="1"
+   <book id="204" category_id="2" price="9.99" stock="1" year="2011"
         title="Dragon Fire" author="G. A. Aiken" isbn="9783492268271" />
-   <book id="205" category_id="2" price="7.99" stock="1"
+   <book id="205" category_id="2" price="7.99" stock="1" year="2011"
         title="Die Türme der Mitternacht" author="Robert Jordan" isbn="9783492268387" />
-   <book id="206" category_id="2" price="9.99" stock="1"
+   <book id="206" category_id="2" price="9.99" stock="1" year="2011"
         title="Der Kelch von Anavrin" author="Lara Adrian" isbn="9783802585197" />
    
    <category id="3" name="Reiseführer" seo_key="reisefuehrer" 
         description="Bücher, Hefte oder Ähnliches, die Informationen über verschiedene Themen, Orte oder Einrichtungen enthalten. Sie werden auch mit dem englischen Begriff Guide benannt."/>
-   <book id="301" category_id="3" price="12.49" stock="1"
+   <book id="301" category_id="3" price="12.49" stock="1" year="2011"
         title="Gebrauchsanweisung für Island" author="Kristof Magnusson" isbn="9783492275880" />
-   <book id="302" category_id="3" price="9.99" stock="1"
+   <book id="302" category_id="3" price="9.99" stock="1" year="2011"
         title="In die Wildnis - Allein nach Alaska" author="Jon Krakauer" isbn="9783492227087" />
-   <book id="303" category_id="3" price="9.99" stock="1"
+   <book id="303" category_id="3" price="9.99" stock="1" year="2011"
         title="Yukon - 3000 Kilometer im Kanu durch Kanada und Alaska" author="Dirk Rohrbach" isbn="9783492404310" />
-   <book id="304" category_id="3" price="19.00" stock="1"
+   <book id="304" category_id="3" price="19.00" stock="1" year="2011"
         title="Frühstück mit Kängurus - Australische Abenteuer" author="Bill Bryson" isbn="9783442309313" />
-   <book id="305" category_id="3" price="9.99" stock="1"
+   <book id="305" category_id="3" price="9.99" stock="1" year="2011"
         title="Istanbul" author="Gabriele Tröger" isbn="9783932410666" />
-   <book id="306" category_id="3" price="9.99" stock="1"
+   <book id="306" category_id="3" price="9.99" stock="1" year="2011"
         title="Travel Handbücher Namibia" author="Livia Pack" isbn="9783770161805" />
 
    <category id="4" name="Science Fiction" seo_key="science_fiction"  

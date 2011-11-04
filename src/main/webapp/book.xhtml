@@ -48,6 +48,29 @@
           Lorem ipsum dolor sit amet.
         </p>
         
+        <table class="book-details-table">
+            <tr>
+                <td class="name">Title</td>
+                <td class="value">#{bookBean.book.title}</td>
+            </tr>
+            <tr>
+                <td class="name">Author</td>
+                <td class="value">#{bookBean.book.author}</td>
+            </tr>
+            <tr>
+                <td class="name">ISBN</td>
+                <td class="value">#{bookBean.book.isbn}</td>
+            </tr>
+            <tr>
+                <td class="name">Erscheinungsjahr</td>
+                <td class="value">#{bookBean.book.year}</td>
+            </tr>
+            <tr>
+                <td class="name">Auf Lager</td>
+                <td class="value">#{bookBean.book.stock}</td>
+            </tr>
+        </table>
+        
         <div>
         
           <h:form>

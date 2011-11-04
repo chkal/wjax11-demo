@@ -52,6 +52,20 @@ table.book-table td.price {
 	color: #404040;	
 }
 
+#book-details .book-details-table {
+   width: 70%;
+   margin: 20px 0;
+}
+
+#book-details .book-details-table .name {
+   font-weight: bold;
+   width: 130px;
+}
+
+#book-details .book-details-table .value {
+   white-space: nowrap;
+}
+
 /*
  * Suche
  */

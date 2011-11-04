@@ -23,6 +23,9 @@ public class Book extends AbstractEntity {
     private Long isbn;
     
     @Basic
+    private Integer year;
+    
+    @Basic
     private Float price;
     
     @Basic
@@ -92,6 +95,14 @@ public Integer getStock() {
 
 public void setStock(Integer stock) {
     this.stock = stock;
+}
+
+public Integer getYear() {
+    return year;
+}
+
+public void setYear(Integer year) {
+    this.year = year;
 }
     
 }
