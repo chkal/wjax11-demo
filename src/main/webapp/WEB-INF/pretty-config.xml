@@ -2,8 +2,15 @@
 <pretty-config xmlns="http://ocpsoft.com/prettyfaces/3.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://ocpsoft.com/prettyfaces/3.3.0 http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.0.xsd">
 
+   <!-- REMOVE EVERYTHING -->
+
    <rewrite match="^/?$" substitute="/home" redirect="302" />
-   
+
    <rewrite match="^/book\.php\?isbn=(\d+)$" substitute="/buch/$1" redirect="302" />
+
+   <url-mapping id="booksByYear">
+      <pattern value="/year/#{year}" />
+      <view-id value="/faces/year.xhtml" />
+   </url-mapping>
 
 </pretty-config>

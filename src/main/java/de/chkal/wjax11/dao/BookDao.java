@@ -41,4 +41,11 @@ public class BookDao extends AbstractDao<Book> {
                 .getResultList();
     }
 
+    public List<Book> findByYear(Integer year) {
+        return entityManager.createQuery(
+                "SELECT b FROM Book b WHERE b.year= :year ORDER BY b.title", Book.class)
+                .setParameter("year", year)
+                .getResultList();
+    }
+
 }

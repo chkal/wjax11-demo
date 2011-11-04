@@ -63,7 +63,12 @@
             </tr>
             <tr>
                 <td class="name">Erscheinungsjahr</td>
-                <td class="value">#{bookBean.book.year}</td>
+                <td class="value">
+                    <h:link outcome="/faces/year.xhtml">
+                        <f:param name="year" value="#{bookBean.book.year}"/>
+                        #{bookBean.book.year}
+                    </h:link>
+                </td>
             </tr>
             <tr>
                 <td class="name">Auf Lager</td>
