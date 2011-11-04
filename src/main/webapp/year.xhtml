@@ -11,7 +11,7 @@
         </f:metadata>
 
         <h:dataTable var="book" value="#{yearBean.books}" rendered="#{ not empty yearBean.books }"
-         styleClass="book-table" columnClasses="title,author,stock,price">
+         styleClass="book-table" columnClasses="title,author,year,stock,price">
 
          <h:column>
             <f:facet name="header">Titel</f:facet>
@@ -26,6 +26,11 @@
          <h:column>
             <f:facet name="header">Autor</f:facet>
             #{book.author}
+         </h:column>
+
+         <h:column>
+            <f:facet name="header">Jahr</f:facet>
+            #{book.year}
          </h:column>
 
          <h:column>

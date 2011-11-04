@@ -19,6 +19,10 @@ table.book-table td.title a {
 table.book-table td.author {
 }
 
+table.book-table td.year {
+    text-align: center;
+}
+
 table.book-table td.stock {
 	text-align: center;
 }
