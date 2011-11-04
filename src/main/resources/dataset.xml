@@ -1,6 +1,7 @@
 <dataset>
 
-   <category id="1" name="Thriller" seo_key="thriller" />
+   <category id="1" name="Thriller" seo_key="thriller" 
+        description="Der Thriller ist sowohl ein Roman- als auch ein Filmgenre mit verschiedenen, sich teilweise überlappenden, Subgenres. Charakteristisch für Thriller ist Spannung, die nicht nur in kurzen Passagen, sondern fast während des gesamten Handlungsverlaufs präsent ist."/>
    <book id="101" category_id="1" price="9.99" stock="1"
         title="Ausgelöscht" author="Cody McFadyen" isbn="9783785723906" />
    <book id="102" category_id="1" price="9.99" stock="3"
@@ -14,7 +15,8 @@
    <book id="106" category_id="1" price="11.99" stock="1"
         title="Das Grab ist erst der Anfang" author="Kathy Reichs" isbn="9783896673237" />
    
-   <category id="2" name="Fantasy" seo_key="fantasy" />
+   <category id="2" name="Fantasy" seo_key="fantasy"  
+        description="Fantasy ist ein Genre der Phantastik, dessen Wurzeln sich in der Mythologie und den Sagen finden."/>
    <book id="201" category_id="2" price="9.99" stock="1"
         title="Eragon - Das Erbe der Macht" author="Christopher Paolini" isbn="9783570138168" />
    <book id="202" category_id="2" price="9.99" stock="1"
@@ -28,7 +30,8 @@
    <book id="206" category_id="2" price="9.99" stock="1"
         title="Der Kelch von Anavrin" author="Lara Adrian" isbn="9783802585197" />
    
-   <category id="3" name="Reiseführer" seo_key="reisefuehrer" />
+   <category id="3" name="Reiseführer" seo_key="reisefuehrer" 
+        description="Bücher, Hefte oder Ähnliches, die Informationen über verschiedene Themen, Orte oder Einrichtungen enthalten. Sie werden auch mit dem englischen Begriff Guide benannt."/>
    <book id="301" category_id="3" price="12.49" stock="1"
         title="Gebrauchsanweisung für Island" author="Kristof Magnusson" isbn="9783492275880" />
    <book id="302" category_id="3" price="9.99" stock="1"
@@ -42,10 +45,7 @@
    <book id="306" category_id="3" price="9.99" stock="1"
         title="Travel Handbücher Namibia" author="Livia Pack" isbn="9783770161805" />
 
-   <category id="4" name="Science Fiction" seo_key="science_fiction" />
-   <category id="5" name="Ernährung" seo_key="ernaehrung" />
-   <category id="6" name="Haus &amp; Garten" seo_key="haus_garten" />
-   <category id="7" name="Kochbücher" seo_key="kochbuecher" />
-   <category id="8" name="Sport &amp; Fitness" seo_key="sport_fitness" />
+   <category id="4" name="Science Fiction" seo_key="science_fiction"  
+        description="Science-Fiction ist ein Genre innerhalb der Literatur und des Films, aber auch anderer Disziplinen wie etwa der bildenden Kunst, das den Einzelnen, die Gesellschaft oder die Umwelt in zeitlich, räumlich oder historisch (oft radikal) alternativen Konstellationen betrachtet."/>
     
 </dataset>

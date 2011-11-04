@@ -8,10 +8,14 @@
 
    <ui:define name="content">
 
-     <h:dataTable var="category" value="#{homeBean.categories}">
+     <h:dataTable var="category" value="#{homeBean.categories}"
+            styleClass="category-table" columnClasses="main,link">
      
         <h:column>
-            #{category.name}
+            <h3>#{category.name}</h3>
+            <p>
+                #{category.description}
+            </p>
         </h:column>
 
         <h:column>

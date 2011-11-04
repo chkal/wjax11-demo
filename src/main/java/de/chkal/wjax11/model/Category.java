@@ -17,6 +17,10 @@ public class Category extends AbstractEntity {
     @Basic
     @Column(name="seo_key")
     private String seoKey;
+    
+    @Basic
+    @Column(length=1000)
+    private String description;
 
     public String getName() {
         return name;
@@ -32,6 +36,14 @@ public class Category extends AbstractEntity {
 
     public void setSeoKey(String seoName) {
         this.seoKey = seoName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
     
 }
