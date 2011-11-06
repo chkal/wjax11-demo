@@ -6,20 +6,20 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="category")
+@Table(name = "category")
 public class Category extends AbstractEntity {
 
     private static final long serialVersionUID = 1L;
-    
+
     @Basic
     private String name;
-    
+
     @Basic
-    @Column(name="seo_key")
+    @Column(name = "seo_key")
     private String seoKey;
-    
+
     @Basic
-    @Column(length=1000)
+    @Column(length = 1000)
     private String description;
 
     public String getName() {
@@ -45,5 +45,5 @@ public class Category extends AbstractEntity {
     public void setDescription(String description) {
         this.description = description;
     }
-    
+
 }

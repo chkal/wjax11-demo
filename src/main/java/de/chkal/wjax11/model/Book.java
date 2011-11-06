@@ -8,37 +8,37 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="book")
+@Table(name = "book")
 public class Book extends AbstractEntity {
 
     private static final long serialVersionUID = 1L;
-    
+
     @Basic
     private String title;
-    
+
     @Basic
     private String author;
-    
+
     @Basic
     private Long isbn;
-    
+
     @Basic
     private Integer year;
-    
+
     @Basic
     private Float price;
-    
+
     @Basic
-    @Column(name="seo_key")
+    @Column(name = "seo_key")
     private String seoKey;
-    
+
     @ManyToOne
-    @JoinColumn(name="category_id")
+    @JoinColumn(name = "category_id")
     private Category category;
-    
+
     @Basic
     private Integer stock;
-    
+
     public String getSeoKey() {
         return seoKey;
     }
@@ -71,38 +71,36 @@ public class Book extends AbstractEntity {
         this.isbn = isbn;
     }
 
-   public String getAuthor()
-   {
-      return author;
-   }
+    public String getAuthor() {
+        return author;
+    }
 
-   public void setAuthor(String author)
-   {
-      this.author = author;
-   }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
-public Float getPrice() {
-    return price;
-}
+    public Float getPrice() {
+        return price;
+    }
 
-public void setPrice(Float price) {
-    this.price = price;
-}
+    public void setPrice(Float price) {
+        this.price = price;
+    }
 
-public Integer getStock() {
-    return stock;
-}
+    public Integer getStock() {
+        return stock;
+    }
 
-public void setStock(Integer stock) {
-    this.stock = stock;
-}
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
 
-public Integer getYear() {
-    return year;
-}
+    public Integer getYear() {
+        return year;
+    }
 
-public void setYear(Integer year) {
-    this.year = year;
-}
-    
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
 }
