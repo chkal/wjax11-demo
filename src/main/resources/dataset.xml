@@ -20,7 +20,7 @@
    <book id="201" category_id="2" price="9.99" stock="1" year="2011"
         title="Eragon - Das Erbe der Macht" author="Christopher Paolini" isbn="9783570138168" />
    <book id="202" category_id="2" price="9.99" stock="1" year="2011"
-        title="Drachenelfen" author="Drachenelfen" isbn="9783453266582" />
+        title="Drachenelfen" author="Bernhard Hennen" isbn="9783453266582" />
    <book id="203" category_id="2" price="5.99" stock="1" year="2011"
         title="Die Legenden der Albae" author="Markus Heitz" isbn="9783492701976" />
    <book id="204" category_id="2" price="9.99" stock="1" year="2011"
