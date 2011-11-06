@@ -31,9 +31,6 @@ public class BookBean {
     @Inject
     private Cart cartBean;
 
-    /**
-     * Prepare this page
-     */
     @URLAction
     public String prepare() {
 
@@ -47,17 +44,14 @@ public class BookBean {
 
     }
 
-    /**
-     * Add the current book to the user's cart
-     */
     public String addToCart() {
 
         // add book to cart
         cartBean.addBook(book);
-        
+
         // REPLACE WITH "return null"
         return "pretty:book";
-        
+
     }
 
     public Long getIsbn() {

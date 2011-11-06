@@ -39,7 +39,6 @@ public class CategoryBean {
         
         if (category == null) {
 
-            // REMOVE THIS AND ADD TODO INSTEAD
             PrettyContext.getCurrentInstance().sendError(404);
             return null;
             
