@@ -4,6 +4,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.ocpsoft.pretty.PrettyContext;
 import com.ocpsoft.pretty.faces.annotation.URLAction;
 import com.ocpsoft.pretty.faces.annotation.URLMapping;
 
@@ -27,12 +28,13 @@ public class BookBean {
     private Cart cartBean;
 
     @URLAction
-    public String prepare() {
+    public String loadData() {
 
         book = bookDao.getByIsbn(isbn);
 
         if (book == null) {
-            return "pretty:home";
+            PrettyContext.getCurrentInstance().sendError(404);
+            return null;
         }
 
         return null;

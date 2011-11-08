@@ -38,10 +38,8 @@ public class CategoryBean {
         Category category = categoryDao.getBySeoKey(seoKey);
         
         if (category == null) {
-
             PrettyContext.getCurrentInstance().sendError(404);
             return null;
-            
         }
 
         books = bookDao.findByCategory(category);
