@@ -43,10 +43,8 @@ public class BookBean {
 
     public String addToCart() {
 
-        // add book to cart
         cartBean.addBook(book);
 
-        // REPLACE WITH "return null"
         return "pretty:book";
 
     }
