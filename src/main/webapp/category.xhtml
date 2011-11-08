@@ -5,13 +5,13 @@
 
    <ui:define name="content">
 
-      <h:dataTable var="book" value="#{categoryBean.books}" rendered="#{ not empty categoryBean.books }"
-         styleClass="book-table" columnClasses="title,author,year,stock,price">
+      <h:dataTable var="book" value="#{categoryBean.books}" 
+      		rendered="#{ not empty categoryBean.books }"
+         	styleClass="book-table" columnClasses="title,author,year,stock,price">
 
          <h:column>
             <f:facet name="header">Titel</f:facet>
 
-            <!-- REMOVE FIRST PARAMETER + "bookSeo" -> "book" -->
             <pretty:link mappingId="book">
                <f:param value="#{book.isbn}" />
                #{book.title}

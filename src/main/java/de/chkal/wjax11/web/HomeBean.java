@@ -14,7 +14,7 @@ import de.chkal.wjax11.model.Category;
 
 @Named
 @RequestScoped
-// REMOVE ANNOTATION
+// TODO: REMOVE ANNOTATION
 @URLMapping(id = "home", pattern = "/home", viewId = "/faces/home.xhtml")
 public class HomeBean {
 
@@ -23,9 +23,9 @@ public class HomeBean {
 
     private List<Category> categories;
 
-    // REMOVE COMPLETE METHOD
+    // TODO: REMOVE COMPLETE METHOD
     @URLAction
-    public void init() {
+    public void loadData() {
         categories = categoryDao.list();
     }
 

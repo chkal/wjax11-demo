@@ -17,8 +17,9 @@ import de.chkal.wjax11.model.Category;
 
 @Named
 @RequestScoped
-// REMOVE ANNOTATION
-@URLMapping(id = "category", pattern = "/kategorie/#{categoryBean.seoKey}", viewId = "/faces/category.xhtml")
+// TODO: REMOVE ANNOTATION
+@URLMapping(id = "category", pattern = "/kategorie/#{categoryBean.seoKey}", 
+	viewId = "/faces/category.xhtml")
 public class CategoryBean {
 
     private String seoKey;
@@ -31,9 +32,8 @@ public class CategoryBean {
 
     private List<Book> books;
 
-    // REMOVE ANNOTATION
     @URLAction
-    public String prepare() {
+    public String loadData() {
 
         Category category = categoryDao.getBySeoKey(seoKey);
         

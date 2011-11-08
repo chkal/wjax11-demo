@@ -8,19 +8,16 @@
 
    <ui:define name="content">
 
-      <!-- Image -->
       <div id="book-image">
       
         <pretty:urlbuffer var="imageUrl" mappingId="bookImage">
           <f:param value="#{bookBean.book.isbn}"/>
         </pretty:urlbuffer>
         
-        <!-- TODO: REPLACE URL WITH: {request.contextPath}/images/book.jpg -->
         <img src="#{imageUrl}" alt="image" width="200"/>
         
       </div>
 
-      <!-- Details -->
       <div id="book-details">
       
         <div id="title">
