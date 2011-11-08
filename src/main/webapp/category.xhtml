@@ -12,8 +12,7 @@
             <f:facet name="header">Titel</f:facet>
 
             <!-- REMOVE FIRST PARAMETER + "bookSeo" -> "book" -->
-            <pretty:link mappingId="bookSeo">
-               <f:param value="#{ seo.escape( book.title ) }" />
+            <pretty:link mappingId="book">
                <f:param value="#{book.isbn}" />
                #{book.title}
             </pretty:link>
