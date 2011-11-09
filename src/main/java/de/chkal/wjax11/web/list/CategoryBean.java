@@ -15,11 +15,12 @@ import de.chkal.wjax11.dao.CategoryDao;
 import de.chkal.wjax11.model.Book;
 import de.chkal.wjax11.model.Category;
 
+/* TODO: Add mapping
+@URLMapping(id = "category", pattern = "/kategorie/#{categoryBean.seoKey}", 
+viewId = "/faces/category.xhtml")
+ */
 @Named
 @RequestScoped
-// TODO: REMOVE ANNOTATION
-@URLMapping(id = "category", pattern = "/kategorie/#{categoryBean.seoKey}", 
-	viewId = "/faces/category.xhtml")
 public class CategoryBean {
 
     private String seoKey;
@@ -32,7 +33,7 @@ public class CategoryBean {
 
     private List<Book> books;
 
-    @URLAction
+    
     public String loadData() {
 
         Category category = categoryDao.getBySeoKey(seoKey);
