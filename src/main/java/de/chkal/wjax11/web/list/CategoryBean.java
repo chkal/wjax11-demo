@@ -15,7 +15,7 @@ import de.chkal.wjax11.dao.CategoryDao;
 import de.chkal.wjax11.model.Book;
 import de.chkal.wjax11.model.Category;
 
-/* TODO: Add mapping
+/* TODO: Add mapping 
 @URLMapping(id = "category", pattern = "/kategorie/#{categoryBean.seoKey}", 
 viewId = "/faces/category.xhtml")
  */
